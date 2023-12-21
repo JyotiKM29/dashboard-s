@@ -35,13 +35,15 @@ function AppLayout() {
         <div className="md:col-start-1 md:row-start-1 md:col-end-13 overflow-y-auto w-full h-full  p-3 md:p-8 md:pl-16">
           <div className="w-full dark:bg-zinc-800 bg-stone-100 rounded-lg shadow-2xl">
             <div className="px-8 py-4 flex justify-between items-center">
-            <h1 className='font-bold text-2xl  md:text-4xl dark:text-teal-400'>SEGWISE</h1>
-            <ToggleButton handleThemeSwitch={handleThemeSwitch}  />
+              <h1 className="font-bold text-2xl  md:text-4xl dark:text-teal-400">
+                SEGWISE
+              </h1>
+              <ToggleButton handleThemeSwitch={handleThemeSwitch} />
             </div>
-            <Outlet /> 
+            <Outlet />
           </div>
         </div>
-        <div className="md:col-start-1 md:col-end-2 md:row-start-1 flex md:items-center justify-center bg-transparent">
+        <div className="md:col-start-1 md:col-end-2 md:row-start-1 flex md:items-center justify-center bg-transparent ">
           <Sidebar />
         </div>
       </div>
@@ -50,4 +52,3 @@ function AppLayout() {
 }
 
 export default AppLayout;
-

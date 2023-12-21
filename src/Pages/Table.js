@@ -92,9 +92,11 @@ const Table = () => {
                 {row.cells.map((cell) => (
                   <td
                     {...cell.getCellProps()}
-                    className="p-1 md:p-3 pl-[2%] border bg-blue-50 border-blue-500 dark:bg-teal-50 dark:border-teal-500"
+                    className="p-1 md:p-3  border bg-blue-50 border-blue-500 dark:bg-teal-50 dark:border-teal-500"
                   >
+                  <p className="w-full  flex justify-center">
                     {cell.render("Cell")}
+                    </p>
                   </td>
                 ))}
               </tr>

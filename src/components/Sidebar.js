@@ -56,7 +56,7 @@ const getPath = (index) => {
 const Sidebar = () => {
   const navigate = useNavigate();
   return (
-    <div className="dark:bg-teal-400  bg-blue-600 flex md:flex-col md:px-3 md:py-4 md:space-y-2 items-center justify-center rounded-full p-2 space-x-2 px-4">
+    <div className="dark:bg-teal-400  bg-blue-600 flex md:flex-col md:px-3 md:py-4 md:space-y-2 items-center justify-center rounded-full p-2 space-x-2 px-4 md:transition-all  md:hover:py-16 md:hover:scale-105">
       {iconData.map((item) => {
         const Icon = item.icon;
         return (

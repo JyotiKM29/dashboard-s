@@ -1,9 +1,9 @@
 import React from "react";
-import ChartComponent from "./components/ChartComponent";
-import PriceAreaChart from "./components/category/PriceAreaChart";
-import SentimentStackedBarChart from "./components/category/SentimentStackedBarChart";
-import TypesRadialChart from "./components/category/TypesRadialChart";
-import CatgoryDonut from "./components/category/CatgoryDonut";
+import ChartComponent from "../components/ChartComponent";
+import PriceAreaChart from "../components/category/PriceAreaChart";
+import SentimentStackedBarChart from "../components/category/SentimentStackedBarChart";
+import TypesRadialChart from "../components/category/TypesRadialChart";
+import CatgoryDonut from "../components/category/CatgoryDonut";
 import { AndroidLogo, GooglePlayLogo, ThumbsUp, UsersThree } from "@phosphor-icons/react";
 
 

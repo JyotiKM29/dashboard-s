@@ -13,7 +13,7 @@ const ToggleButton = ({handleThemeSwitch}) => {
         handleThemeSwitch();
       }}
       className={`${
-        isActive ? 'dark:bg-blue-900 bg-blue-500' : 'bg-gray-300'
+        isActive ? 'dark:bg-teal-400 bg-blue-500' : 'bg-gray-300'
       } w-14 h-6 rounded-full p-1 focus:outline-none transition-colors duration-300 flex items-center justify-center`}
     >
       <span

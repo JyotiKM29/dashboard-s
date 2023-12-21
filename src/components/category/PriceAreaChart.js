@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
 import ApexCharts from "apexcharts";
-import { ThemeContext } from '../../context/Theme';
+import { ThemeContext } from '../../context/ThemeProvider';
 
 const PriceAreaChart = () => {
   const chartRef = useRef(null);

@@ -2,7 +2,7 @@ import React, { useState, createContext } from 'react';
 
 export const ThemeContext = createContext();
 
-const Theme = ({ children }) => {
+const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(""); 
 
   return (
@@ -12,4 +12,4 @@ const Theme = ({ children }) => {
   );
 };
 
-export default Theme;
+export default ThemeProvider;

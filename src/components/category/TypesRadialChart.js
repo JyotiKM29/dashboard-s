@@ -1,7 +1,7 @@
 
 import React, { useContext, useEffect, useRef } from "react";
 import ApexCharts from "apexcharts";
-import { ThemeContext } from '../../context/Theme';
+import { ThemeContext } from '../../context/ThemeProvider';
 
 const TypesRadialChart = () => {
   const chartRef = useRef(null);

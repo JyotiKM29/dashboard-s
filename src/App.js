@@ -1,13 +1,13 @@
-import React from 'react'
-import Theme from './context/Theme'
-import AppLayout from './AppLayout'
+import React from 'react';
+import ThemeProvider from './context/ThemeProvider';
+import Router from './Router/Router';
 
 const App = () => {
   return (
-    <Theme>
-      <AppLayout />
-    </Theme>
-  )
-}
+    <ThemeProvider>
+      <Router />
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;

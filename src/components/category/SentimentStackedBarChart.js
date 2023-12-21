@@ -1,11 +1,16 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef} from 'react';
 import ApexCharts from 'apexcharts';
+import { ThemeContext } from '../../context/Theme';
 
 const SentimentStackedBarChart = () => {
   const chartRef = useRef(null);
+  const {theme} = useContext(ThemeContext);
+
 
   useEffect(() => {
+    const labelColor = theme === 'dark' ? '#f1f5f9' : '#020617';
+
     const options = {
       series: [
         {
@@ -49,6 +54,11 @@ const SentimentStackedBarChart = () => {
             'Shopping',
             'Family',
           ],
+          labels: {
+            style: {
+              colors: labelColor,
+            },
+          },
       },
       fill: {
         opacity: 1,
@@ -58,6 +68,26 @@ const SentimentStackedBarChart = () => {
         offsetX: 0,
         offsetY: 50,
       },
+      grid: {
+        borderColor: "rgba(0,0,0,0)",
+        padding: {
+          top: -10,
+        },
+      },
+      yaxis: {
+        show: false,
+      },
+
+      axisBorder: {
+        show: false,
+      },
+  
+      crosshairs: {
+        show: false,
+      },
+      theme: {
+        mode: theme,
+      }
     };
 
     if (chartRef.current) {
@@ -68,7 +98,7 @@ const SentimentStackedBarChart = () => {
         chart.destroy();
       };
     }
-  }, []);
+  }, [theme]);
 
   return <div id="chart" ref={chartRef}></div>;
 };

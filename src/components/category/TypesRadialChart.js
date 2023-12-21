@@ -1,11 +1,14 @@
 
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import ApexCharts from "apexcharts";
+import { ThemeContext } from '../../context/Theme';
 
 const TypesRadialChart = () => {
   const chartRef = useRef(null);
+  const {theme} = useContext(ThemeContext);
 
   useEffect(() => {
+    const labelColor = theme === 'dark' ? '#f1f5f9' : '#020617';
     const options = {
       series: [44, 55, 67, 83 ,38 ],
       chart: {
@@ -17,6 +20,7 @@ const TypesRadialChart = () => {
           dataLabels: {
             name: {
               fontSize: "22px",
+              color: labelColor,
             },
             value: {
               fontSize: "16px",
@@ -40,6 +44,11 @@ const TypesRadialChart = () => {
         "Shopping",
         
       ],
+      theme: {
+        mode: theme,
+      }
+    
+      
     };
 
     if (chartRef.current) {
@@ -50,7 +59,7 @@ const TypesRadialChart = () => {
         chart.destroy();
       };
     }
-  }, []);
+  }, [theme]);
 
   return (
     <div

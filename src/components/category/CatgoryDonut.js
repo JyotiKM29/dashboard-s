@@ -1,11 +1,15 @@
 
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import ApexCharts from "apexcharts";
+
+import { ThemeContext } from '../../context/Theme';
 
 const CatgoryDonut = () => {
   const chartRef = useRef(null);
+  const {theme} = useContext(ThemeContext);
 
   useEffect(() => {
+    const labelColor = theme === 'dark' ? '#f1f5f9' : '#020617';
     const categories = [
       "Creativity & Leisure",
      
@@ -39,6 +43,10 @@ const CatgoryDonut = () => {
           },
         },
       ],
+      theme: {
+        mode: theme,
+        
+      }
     };
 
     if (chartRef.current) {
@@ -49,7 +57,7 @@ const CatgoryDonut = () => {
         chart.destroy();
       };
     }
-  }, []);
+  }, [theme]);
 
   return <div id="chart" ref={chartRef}></div>;
 };

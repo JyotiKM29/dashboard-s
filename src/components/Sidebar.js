@@ -13,13 +13,13 @@ const iconData = [
 
 const Sidebar = () => {
   return (
-    <div className="bg-blue-600 flex md:flex-col md:px-3 md:py-4 md:space-y-2 items-center justify-center rounded-full p-2 space-x-2 px-4">
+    <div className="dark:bg-teal-400  bg-blue-600 flex md:flex-col md:px-3 md:py-4 md:space-y-2 items-center justify-center rounded-full p-2 space-x-2 px-4">
       {iconData.map((item) => {
         const Icon = item.icon;
         return (
           <button
             key={item.key}
-            className="rounded-full hover:bg-blue-700 active:bg-blue-800 cursor-pointer"
+            className="rounded-full hover:bg-blue-700 active:bg-blue-800 cursor-pointer dark:hover:bg-teal-500"
           >
             <Icon className={item.className} />
           </button>
